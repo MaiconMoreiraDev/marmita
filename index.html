@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BemCaseirinhas</title>
+</head>
+<body>
+
+
+    <div class="apresenta">
+        <h5>Bem caseirinhas marmitas, a culinaria caseira que você precisa.</h5>
+        <img src="logo.png" width="200px" height="200px">
+        <div class="bot">
+        <a href="https://wa.me/message/MHGYYA4C7BEWD1" class="button">Reserva Por Whatsapp</a>
+        <a href="pagpix.html" class="button">Pagamento Pix</a>
+    </div>
+    </div>
+    <br>
+    <div class="count">
+
+            <button class="clear" onclick="limparCarrinho()">Limpar Carrinho</button><br>
+            <p class="total"><img src="car.png" width="30px" height="30px">Total: <span id="total1">0.00</span></p>
+            
+            
+            
+</div>
+<h5>"Após adicionar seus itens no carrinho vá ao botão Pagamento Pix"</h5>
+
+    <script>
+        // Variável para armazenar o número de itens no carrinho
+        var count = 0;
+        var total = 0;
+        function atualizarTotal(precoItem) {
+            total += precoItem;
+            document.getElementById("total1").textContent = total.toFixed(2);
+        }
+
+        function adicionarAoCarrinho(precoItem) {
+            total += precoItem;
+            document.getElementById("total1").textContent = total.toFixed(2);
+            document.getElementById("total1").textContent = total.toFixed(2);
+        }
+            // Função para finalizar a compra
+        function limparCarrinho() {
+            count = 0;
+            total = 0;
+            document.getElementById("total1").textContent = total;
+            document.getElementById("total").textContent = total.toFixed(2);
+        }
+
+    
+        
+
+        
+    </script>
+
+
+    <div class="container">
+        <div class="card">
+            <h2>Frango Assado</h2>
+            <p>Delicioso frango assado e temperado.</p>
+            <p>Preço: R$50,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho(50.00)">Adicionar ao Carrinho</button> 
+            <hr size="1">
+            <h2>Galeto</h2>
+            <p>Delicioso Galeto (Meio Frango) assado e temperado.</p>
+            <p>Preço: R$30,00</p>
+            <button  class="cart" onclick="adicionarAoCarrinho(30.00)">Adicionar ao Carrinho</button> 
+            <hr size="1">
+            <h2>Maionese P</h2>
+            <p>Apeoximadamente 300g</p>
+            <p>Preço: R$5,00</p>
+            <button   class="cart" onclick="adicionarAoCarrinho(5.00)">Adicionar ao Carrinho</button> 
+            <hr size="1">
+            <h2>Maionese G</h2>
+            <p>Aproximadamente 600g</p>
+            <p>Preço: R$10,00</p>
+            <button  class="cart" onclick="adicionarAoCarrinho(10.00)"">Adicionar ao Carrinho</button> 
+        </div>
+    </div>
+</body>
+</html>
